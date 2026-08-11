@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>Schairer Designs</title>
+  <style>
+  /* Elements start hidden */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  /* Activated when scrolled into view */
+  .scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Different animation directions */
+  .slide-left {
+    transform: translateX(-60px);
+  }
+
+  .slide-right {
+    transform: translateX(60px);
+  }
+
+  .zoom-in {
+    transform: scale(0.85);
+  }
+
+  .fade-in {
+    transform: none;
+  }
+
+  .scroll-animate.show.slide-left,
+  .scroll-animate.show.slide-right,
+  .scroll-animate.show.zoom-in {
+    transform: translateX(0) scale(1);
+  }
+
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-animate {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+  </head>
+  <body style="background-image:url('https://wallpapercave.com/mwp/wp2804137.jpg')">
+    <h1>Coming Soon</h1>
+    <section class="scroll-animate">
+  <h2>Our Services</h2>
+  <p>
+    Professional asphalt paving, repair and maintenance services.
+  </p>
+</section>
+
+<section class="scroll-animate slide-left">
+  <h2>Residential Asphalt</h2>
+  <p>
+    Driveways and asphalt repairs for your home.
+  </p>
+</section>
+
+<section class="scroll-animate slide-right">
+  <h2>Commercial Asphalt</h2>
+  <p>
+    Parking lots, paving and commercial asphalt maintenance.
+  </p>
+</section>
+
+<section class="scroll-animate zoom-in">
+  <img src="images/driveway.jpg" alt="New asphalt driveway">
+</section>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const animatedElements = document.querySelectorAll(".scroll-animate");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  animatedElements.forEach((element) => {
+    observer.observe(element);
+  });
+
+});
+</script>
+  </body>
+</html>
