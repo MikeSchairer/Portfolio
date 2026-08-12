@@ -6,7 +6,7 @@ content:
   - name: home
     label: Home Page
     type: file
-    path: content/home.yml
+    path: content/home.json
     fields:
       - name: title
         label: Title
