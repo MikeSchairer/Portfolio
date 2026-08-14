@@ -1,38 +1,65 @@
-<html>
-  <head>
-    <title>Schairer Designs</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll & Parallax Template</title>
     <link rel="stylesheet" href="css/style.css">
-  
-  </head>
-  <body>
-    <header>
-      <h1>Mike Schairer</h1>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">ScrollMagic</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section (Parallax Background) -->
+    <header id="hero" class="section parallax bg-hero">
+        <div class="content-box">
+            <h1>Immersive Web Experiences</h1>
+            <p>Scroll down to experience fluid CSS parallax effects.</p>
+            <a href="#about" class="btn">Explore More</a>
+        </div>
     </header>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
 
-  const animatedElements = document.querySelectorAll(".scroll-animate");
+    <!-- About Section (Solid Content) -->
+    <section id="about" class="section solid-bg">
+        <div class="content-box text-dark">
+            <h2>About Our Approach</h2>
+            <p>This single-page template relies purely on modern CSS features to deliver lag-free scrolling performances across all platforms, doing away with resource-heavy external libraries.</p>
+        </div>
+    </section>
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.15
-    }
-  );
+    <!-- Services Section (Parallax Background) -->
+    <section id="services" class="section parallax bg-services">
+        <div class="content-box">
+            <h2>Modern Services</h2>
+            <p>Leveraging high-performance structures to make your brand look unforgettable.</p>
+        </div>
+    </section>
 
-  animatedElements.forEach((element) => {
-    observer.observe(element);
-  });
+    <!-- Contact Section (Solid Content) -->
+    <section id="contact" class="section solid-bg">
+        <div class="content-box text-dark">
+            <h2>Get In Touch</h2>
+            <p>Ready to start your next creative project? Reach out below.</p>
+            <form class="contact-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit" class="btn btn-dark">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-});
-</script>
-    <script src="/js/Content.js"></script>
-  </body>
+    <!-- Smooth Scroll JavaScript Fallback (Optional) -->
+    <script>
+        // Soft fallback or extra scroll handling logic can be added here if needed.
+    </script>
+</body>
 </html>
+
