@@ -78,7 +78,7 @@ body {
 }
 
 .content-box h1 {
-    font-size: 50px;
+    font-size: 5em;
     margin-bottom: 20px;
 }
 
@@ -95,6 +95,11 @@ body {
 
 .text-dark {
     color: #333;
+}
+
+/* Hero Section */
+#hero strong {
+    font-size: 2em;
 }
 
 /* UI Elements */
