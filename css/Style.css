@@ -189,10 +189,10 @@ body {
         padding: 20px;
     }
     .content-box h1 {
-        font-size: 32px;
+        
     }
     .content-box h2 {
-        font-size: 28px;
+        
     }
     /* Disable fixed backgrounds on iOS/Mobile browsers where it breaks behavior */
     .parallax {
