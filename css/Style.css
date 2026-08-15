@@ -189,7 +189,7 @@ body {
         padding: 20px;
     }
     .content-box h1 {
-        
+        font-size:3em;
     }
     .content-box h2 {
         
@@ -204,4 +204,7 @@ body {
     .contact-form input {
         width: 100%;
     }
+    .bg-hero strong {
+    font-size: 1em;
+}
 }
