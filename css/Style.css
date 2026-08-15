@@ -98,7 +98,7 @@ body {
 }
 
 /* Hero Section */
-#hero strong {
+.bg-hero strong {
     font-size: 2em;
 }
 
