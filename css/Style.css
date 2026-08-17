@@ -97,7 +97,18 @@ body {
     border: 1px solid rgba(255,255,255,0.2);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     padding: 10px 20px;
-    margin: 0 0 10px;
+    margin: 0 0 10px 10px;
+    float: left;
+    width: 33%;
+}
+.section-box h2 {
+
+}
+.section-box ul {
+
+}
+.section-box li {
+
 }
 .text-dark {
     color: #333;
