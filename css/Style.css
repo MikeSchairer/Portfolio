@@ -16,6 +16,26 @@ body {
     color: #fff;
     overflow-x: hidden;
 }
+ul {
+    list-style-type: none;
+    margin: 0 0 10px;
+}
+li {
+    padding: 0 0 5px;
+}
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+
+}
+p {
+
+}
+
 
 /* Navigation Bar */
 .navbar {
