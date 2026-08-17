@@ -250,4 +250,10 @@ p {
     .content-box p {
         font-size: 12px;
     }
+    .section-box {
+        float: none; 
+        width: 80%;
+        margin: 0 auto 10px;
+    }
+    
 }
