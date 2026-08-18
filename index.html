@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MICHAEL SCHAIRER • Web Designer & Developer</title>
     <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
-<link rel='stylesheet' href='https://unpkg.com/aos@2.3.0/dist/aos.css'>
+	<link rel='stylesheet' href='https://unpkg.com/aos@2.3.0/dist/aos.css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
 
     <!-- Fixed Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">MICHAEL SCHAIRER</div>
-        <ul class="nav-links">
+    <nav id="nav" class="navbar">
+        <div class="menu-btn"></div>
+		<ul class="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -26,21 +29,22 @@
     <header id="hero" class="section parallax bg-hero">
         <div class="content-box">
             <h1 data-aos="zoom-out-down" data-aos-offset="300"
-     data-aos-easing="ease-in-sine" id="hero-trigger">MICHAEL SCHAIRER</h1>
-            <p data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="500" data-aos-anchor="#hero-trigger" data-aos-anchor-placement="top-center"><strong>Web Designer & Developer</strong><br/><i>Graphic Design • UI/UX • WordPress • Front-End Development</i></p>
-            <p data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1000" data-aos-anchor="#hero-trigger" data-aos-anchor-placement="top-center">I design and develop websites and digital experiences that combine creative design with practical functionality. With extensive experience in graphic design and web development, I've designed and developed 100+ websites for businesses and organizations.</p>
+     data-aos-easing="ease-in-sine" id="hero-trigger"><div class="logo"><b>Mi<span>c</span>hae<span>l</span> Sc<span>h</span>ai<span>r</span>er</b></div></h1>
+            <p class="my-title" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="500" data-aos-anchor="#hero-trigger" data-aos-anchor-placement="top-center"><strong><span>Web</span> Designer <span>&</span> Developer</strong><br/><i>Graphic <span>Design</span> • UI<span>/</span>UX • Word<span>Press</span> • Front<span>-End</span> Development</i></p>
+            <p class="hero-description" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1000" data-aos-anchor="#hero-trigger" data-aos-anchor-placement="top-center">I design and develop websites and digital experiences that combine creative design with practical functionality. With extensive experience in graphic design and web development, I've designed and developed 100+ websites for businesses and organizations.</p>
         </div>
     </header>
 
     <!-- About Section (Solid Content) -->
-    <section id="about" class="section solid-bg">
+    <section id="about" class="section solid-bg about-section">
         <div class="content-box">
-            <h2 data-aos="zoom-out-down" data-aos-offset="300"
-     data-aos-easing="ease-in-sine">About Me</h2>
-            <p data-aos="fade-right" data-aos-easing="ease-in-sine">I'm a Graphic Designer and Web Developer with a background that combines creative design, web development, database technology, and digital problem-solving.</p>
-            <p data-aos="fade-right" data-aos-easing="ease-in-sine">I've designed and developed 100+ websites, creating everything from visual layouts and branding to responsive websites and custom web solutions.</p>
-            <p data-aos="fade-right" data-aos-easing="ease-in-sine">My experience includes UI/UX design, WordPress, HTML, CSS, JavaScript, PHP, ASP.NET, SQL databases, graphic design, website management, and digital marketing.</p>
-            <p data-aos="fade-right" data-aos-easing="ease-in-sine">I enjoy taking an idea from concept to finished product—bringing together design, technology, and usability to create websites that look great and work effectively.</p>
+            <h2 id="about-trigger" data-aos="zoom-out-down" data-aos-easing="ease-in-sine">About Me</h2>
+			<div class="about-box">
+				<p data-aos-anchor="#about-trigger" data-aos-anchor-placement="center-center" data-aos="fade-right" data-aos-easing="ease-in-sine">I'm a Graphic Designer and Web Developer with a background that combines creative design, web development, database technology, and digital problem-solving.</p>
+				<p data-aos-anchor="#about-trigger" data-aos-anchor-placement="center-center" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="200">I've designed and developed 100+ websites, creating everything from visual layouts and branding to responsive websites and custom web solutions.</p>
+				<p data-aos-anchor="#about-trigger" data-aos-anchor-placement="center-center" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="600">My experience includes UI/UX design, WordPress, HTML, CSS, JavaScript, PHP, ASP.NET, SQL databases, graphic design, website management, and digital marketing.</p>
+				<p data-aos-anchor="#about-trigger" data-aos-anchor-placement="center-center" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="900">I enjoy taking an idea from concept to finished product—bringing together design, technology, and usability to create websites that look great and work effectively.</p>
+			</div>
         </div>
     </section>
 
