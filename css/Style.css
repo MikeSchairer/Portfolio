@@ -13,8 +13,16 @@ html {
 
 body {
     background-color: rgba(0,0,0,0.3);
+	background-image: url("../images/bg.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
     color: #fff;
     overflow-x: hidden;
+}
+header {
+	margin: 0;	
 }
 ul {
     list-style-type: none;
@@ -23,19 +31,24 @@ ul {
 li {
     padding: 0 0 5px;
 }
+h1 ,h2, h3, h4, h5, p {
+    margin: 0 0 10px;
+}
 h1 {
-
+	
 }
 h2 {
     font-size: 3em;
 }
 h3 {
     font-size: 1.5em;
-    margin: 0 0 10px;
     line-height: 1.3em;
 }
 p {
 
+}
+.hide { margin-top: -60px; } 
+.show { margin-top: 0px;
 }
 
 
@@ -89,7 +102,7 @@ p {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -98,23 +111,21 @@ p {
 }
 
 .content-box {
-    width: 100%;
+    margin: 0 auto;
+    width: 1200px;
     z-index: 2;
 }
 
 .content-box h1 {
     font-size: 5em;
-    margin-bottom: 20px;
 }
 
 .content-box h2 {
-    margin-bottom: 20px;
+	
 }
 
 .content-box p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+
 }
 .section-box {
     border-radius: 5px;
@@ -139,9 +150,122 @@ p {
 }
 
 /* Hero Section */
+#hero {
+	margin: 50px auto 0;
+}
 .bg-hero strong {
     font-size: 2em;
 }
+.logo {
+  text-align: center;
+  width: 65%;
+  height: 250px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   user-select: none;
+}
+
+.logo b{
+  font-family: "Neonderthaw", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #79F335, 0 0 0.5em #79F335, 0 0 0.1em #79F335, 0 10px 3px #000;
+}
+.logo b span,
+.my-title span {
+  animation: blink linear infinite 2s;
+}
+.logo b span:nth-of-type(2),
+.my-title span:nth-of-type(2){
+  animation: blink linear infinite 3s;
+}
+.my-title {
+  font-family: "Neonderthaw", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #0F8AD8, 0 0 0.5em #0F8AD8, 0 0 0.1em #0F8AD8, 0 10px 3px #000;	
+}
+.my-title i {
+  font-family: "Tilt Neon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #0F8AD8, 0 0 0.5em #0F8AD8, 0 0 0.1em #0F8AD8, 0 10px 3px #000;	
+}
+.hero-description {
+	background-color: rgba(0,0,0,0.6);
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 6px 2px rgba(255, 255, 255, 0.08),
+	inset 0px 6px 18px 0px rgba(0, 0, 0, 0.08);
+	margin: 20px auto;
+	padding: 20px;
+	width: 500px;
+}
+
+/* --- About Section --- */
+.about-section {
+	
+}
+.about-section h2 {
+	font-family: "Neonderthaw", cursive;
+	font-weight: 400;
+	font-style: normal;
+	color: #fee;
+	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #0F8AD8, 0 0 0.5em #0F8AD8, 0 0 0.1em #0F8AD8, 0 10px 3px #000;	
+}
+.about-box {
+	background-color: rgba(0,0,0,0.6);
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 6px 2px rgba(255, 255, 255, 0.08),
+	inset 0px 6px 18px 0px rgba(0, 0, 0, 0.08);
+	margin: 20px auto;
+	padding: 20px;
+	width: 500px;
+}
+
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #333;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
 
 /* UI Elements */
 .btn {
@@ -193,6 +317,9 @@ p {
   text-align: center;
   color: #FFF;
   font-size: 3em;
+}
+.solid-bg {
+	background-color: rgba(0,0,0,0.8);
 }
 
 /* CSS Parallax Mechanism */
