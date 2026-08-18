@@ -2,7 +2,10 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+html,
+body {
+	width: 100%;
 }
 
 html {
@@ -47,30 +50,27 @@ h3 {
 p {
 
 }
-.hide { margin-top: -60px; } 
-.show { margin-top: 0px;
+.hide { 
+	top: -100px; 
+} 
+.show { 
+	top: 0px;
 }
 
 
 /* Navigation Bar */
 .navbar {
     position: fixed;
-    top: 0;
     left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+	width: calc(100% - 40px);
+    padding: 20px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.navbar .nav {
+
 }
 
 .nav-links {
@@ -92,6 +92,9 @@ p {
 .nav-links a:hover {
     color: #00bcd4;
 }
+.menu-btn {
+	display: none;
+}
 
 /* Structural Layouts */
 .section {
@@ -102,7 +105,7 @@ p {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    width: 100%;
+    width: calc(100% - 40px);
     margin: 0 auto;
 }
 
@@ -157,16 +160,11 @@ p {
     font-size: 2em;
 }
 .logo {
-  text-align: center;
-  width: 65%;
-  height: 250px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-   user-select: none;
+	text-align: center;
+	width: 100%;
+	height: 1.5em;
+	margin: auto;
+	user-select: none;
 }
 
 .logo b{
@@ -322,48 +320,14 @@ p {
 	background-color: rgba(0,0,0,0.8);
 }
 
-/* CSS Parallax Mechanism */
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Dark tint overlay for parallax readability */
-.parallax::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-/* Placeholder Stock Assets - Replace with your own high-res images */
-.bg-hero {
-    background-image: url('https://picsum.photos');
-}
-
-.bg-services {
-    background-image: url('https://picsum.photos');
-}
 
 /* Responsive Scaling Rules */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 20px;
-    }
     .content-box h1 {
-        font-size:2em;
+        font-size:4em;
     }
     .content-box h2 {
         
-    }
-    /* Disable fixed backgrounds on iOS/Mobile browsers where it breaks behavior */
-    .parallax {
-        background-attachment: scroll;
     }
     .contact-form {
         flex-direction: column;
@@ -372,15 +336,32 @@ p {
         width: 100%;
     }
     .bg-hero strong {
-    font-size: 1em;
+		font-size: 2em;
     }
     .content-box p {
-        font-size: 12px;
+        font-size: 1em;
     }
     .section-box {
         float: none; 
         width: 80%;
         margin: 0 auto 10px;
     }
-    
+}
+@media (max-width: 580px) {
+    .content-box h1 {
+        font-size:3em;
+		line-height: 1em;
+    }
+	.logo {
+		height: auto;
+	}
+    .bg-hero strong {
+		font-size: 2em;
+    }
+    .content-box p {
+        font-size: 1em;
+    }
+	.hero-description {
+		width: calc(100% - 40px);
+	}
 }

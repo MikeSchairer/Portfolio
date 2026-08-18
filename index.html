@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MICHAEL SCHAIRER • Web Designer & Developer</title>
-    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
-	<link rel='stylesheet' href='https://unpkg.com/aos@2.3.0/dist/aos.css'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Tilt+Neon&display=swap" rel="stylesheet">
@@ -14,16 +12,18 @@
 <body>
 
     <!-- Fixed Navigation Bar -->
-    <nav id="nav" class="navbar">
-        <div class="menu-btn"></div>
-		<ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#view-work">View My Work</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
-    </nav>
+	<div id="nav" class="navbar show">
+		<div class="menu-btn"></div>
+		<nav class="nav">
+			<ul class="nav-links">
+				<li><a href="#hero">Home</a></li>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#view-work">View My Work</a></li>
+				<li><a href="#contact">Contact Me</a></li>
+			</ul>
+		</nav>
+	</div>
 
     <!-- Hero Section (Parallax Background) -->
     <header id="hero" class="section parallax bg-hero">
@@ -119,25 +119,7 @@
             </form>
         </div>
     </section>
-  <div class="item" data-aos="fade-up">1</div>
-<div class="item" data-aos="fade-down">2</div>
-<div class="item" data-aos="fade-right">3</div>
-<div class="item" data-aos="fade-left">4</div>
-
-<div class="item" data-aos="zoom-in">5</div>
-<div class="item" data-aos="zoom-out">6</div>
-
-<div class="item" data-aos="slide-up">7</div>
-
-<div class="item" data-aos="flip-up">8</div>
-<div class="item" data-aos="flip-down">9</div>
-<div class="item" data-aos="flip-right">10</div>
-<div class="item" data-aos="flip-left">11</div>
     <script src='https://unpkg.com/aos@2.3.0/dist/aos.js'></script><script  src="./js/script.js"></script>
-    <!-- Smooth Scroll JavaScript Fallback (Optional) -->
-    <script>
-        // Soft fallback or extra scroll handling logic can be added here if needed.
-    </script>
 </body>
 </html>
 
