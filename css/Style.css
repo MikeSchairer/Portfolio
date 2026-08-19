@@ -212,29 +212,51 @@ p {
 }
 
 .content-box h2 {
-	
+	font-family: "Neonderthaw", cursive;
+	font-weight: 400;
+	font-style: normal;
+	color: #fee;
+	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #79F335, 0 0 0.5em #79F335, 0 0 0.1em #79F335, 0 10px 3px #000;
 }
 
 .content-box p {
 
 }
 .section-box {
-    border-radius: 5px;
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	background-color: rgba(0,0,0,0.6);
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 6px 2px rgba(255, 255, 255, 0.08),
+	inset 0px 6px 18px 0px rgba(0, 0, 0, 0.08);
     padding: 10px 20px;
-    margin: 0 0 10px 10px;
+    margin: 0 0 10px;
     float: left;
-    width: Calc(33% - 10px);
+    width: 100%;
 }
 .section-box h3 {
-
+	border-style: solid;
+	border-width: 0 0 1px;
+	border-color: rgba(255,255,255,0.4);
+	padding: 0 0 5px;
+	line-height: 1.5em;
 }
 .section-box ul {
 
 }
 .section-box li {
-
+	display: inline-block;
+	text-align: left;
+	width: 33%;
+	font-size: 0.9em;
+	line-height: 0.8em;
+	cursor: default;
+}
+.section-box li:hover {
+	font-weight: 600;
+	color: #79F335;
+	transition-property: color, font-weight;
+	transition-duration: 1s;
+	cursor: default;
 }
 .text-dark {
     color: #333;
@@ -317,6 +339,71 @@ p {
 	width: 500px;
 }
 
+/* --- My Work Section --- */
+.portfolio {
+	padding: 0;
+	width: 100%;
+}
+.portfolio-box {
+	width: 100%;
+}
+.portfolio-box h2 {
+	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #0F8AD8, 0 0 0.5em #0F8AD8, 0 0 0.1em #0F8AD8, 0 10px 3px #000;	
+}
+.scroll-container {
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0;
+	box-sizing: border-box;	
+	
+	&:hover {
+		.scroll-track {
+			animation-play-state: paused;
+		}
+	}
+}
+.scroll-track {
+	display: inline-flex;
+	white-space: nowrap;
+	animation: marquee 15s linear infinite;
+
+	span {
+		margin-right: 20px;
+		vertical-align: middle;
+	}
+}
+.scroll-track span {
+	
+}
+.scroll-track .img-container {
+	background-color: rgba(0,0,0,0.6);
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 8px;
+	box-shadow: inset 0px 0px 6px 2px rgba(255, 255, 255, 0.08), inset 0px 6px 18px 0px rgba(0, 0, 0, 0.08);
+	padding: 20px;
+}
+.scroll-track .img-container:hover {
+	background-color: rgba(15, 138, 216, 0.4);
+	transition-property: background-color;
+	transition-duration: 2s;
+}
+.scroll-track .img-container img {
+	border-radius: 6px;
+	width: 300px;
+}
+.scroll-track .img-title {
+	padding: 5px 0 3px;
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0%);
+    }
+    /* Magic is here. This is the width of the elem with text after rendering the page */
+    to {
+		transform: translateX(-2172px);
+    }
+}
 
 @keyframes blink {
   78% {
