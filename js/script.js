@@ -2,14 +2,14 @@ AOS.init({
   duration: 1200,
 })
 
-nav = document.getElementById("nav");
+nav = document.getElementById("logo");
 
   var myScrollFunc = function () {
     var y = window.scrollY;
     if (y >= 200) {
-        nav.className = "navbar hide"
+        nav.className = "logo show"
     } else {
-        nav.className = "navbar show"
+        nav.className = "logo hide"
     }
   };
 

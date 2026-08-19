@@ -61,20 +61,29 @@ p {
 
 
 /* Navigation Bar */
-.hide { 
-	top: -100px; 
+.logo.hide { 
+	display: none;
+	height: 0px;
 } 
-.show { 
-	top: 0px;
+.logo.show { 
+	float: left;
+	width: auto;
+	clear: none;
+	padding: 10px 20px;
+}
+.logo.show b {
+	font-size: 2em;
 }
 .navbar {
     position: fixed;
-    left: 0;
-	width: calc(100% - 40px);
-    padding: 20px;
+    top: 0;
+	left: 0;
+	width:100%;
+    padding: 0px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     z-index: 1000;
+	transition: max-height .2s ease-out;
 }
 
 .navbar .nav {
@@ -84,6 +93,10 @@ p {
 .nav-links {
     display: flex;
     list-style: none;
+	overflow: hidden;
+	clear: both;
+	max-height: 0;
+	margin: 0;
 }
 
 .nav-links li {
@@ -95,14 +108,80 @@ p {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
+	line-height: 1.5em;
 }
 
 .nav-links a:hover {
     color: #00bcd4;
 }
-.menu-btn {
+.menu-btn,
+.menu-icon {
 	display: none;
 }
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.menu-icon .navicon:before {
+  top: 5px;
+}
+
+.menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .nav-links {
+  max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
 
 /* Structural Layouts */
 .section {
@@ -371,5 +450,30 @@ p {
     }
 	.hero-description {
 		width: calc(100% - 40px);
+	}
+}
+@media (max-width: 550px) {
+	
+}
+
+@media (min-width: 48em) {
+	.nav-links li {
+		float: left;
+	}
+	.nav-links li a {
+		padding: 20px 30px;
+		display: block;
+	}
+	.nav-links {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+	.menu-icon {
+		display: none;
+	}
+	.navbar .nav {
+		display: flex;
+		justify-content: center;
 	}
 }
