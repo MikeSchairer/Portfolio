@@ -15,12 +15,6 @@ html {
 }
 
 body {
-    background-color: rgba(0,0,0,0.3);
-	background-image: url("../images/IMG_0105.jpeg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
     color: #fff;
     overflow-x: hidden;
 }
@@ -50,15 +44,29 @@ h3 {
 p {
 
 }
+.background {
+    background-color: rgba(0,0,0,0.3);
+	background-image: url("../images/bg.jpeg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: -1;
+	will-change: transform;
+}
+
+
+/* Navigation Bar */
 .hide { 
 	top: -100px; 
 } 
 .show { 
 	top: 0px;
 }
-
-
-/* Navigation Bar */
 .navbar {
     position: fixed;
     left: 0;
