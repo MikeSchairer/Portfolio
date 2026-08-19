@@ -78,12 +78,13 @@ p {
     position: fixed;
     top: 0;
 	left: 0;
-	width:100%;
     padding: 0px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     z-index: 1000;
 	transition: max-height .2s ease-out;
+	width: 100vw;
+	height: 70px;
 }
 
 .navbar .nav {
@@ -100,7 +101,7 @@ p {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    
 }
 
 .nav-links a {
@@ -449,6 +450,9 @@ p {
         font-size: 1em;
     }
 	.hero-description {
+		width: calc(100% - 40px);
+	}
+	.about-box {
 		width: calc(100% - 40px);
 	}
 }
