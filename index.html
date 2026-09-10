@@ -9,6 +9,27 @@
 	<link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/Style.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/splide.min.css">
+	<script src="js/splide.min.js"></script>
+	<script src="js/splide-extension-auto-scroll.min.js"></script>
+	<script src="js/splide-extension-intersection.min.js"></script>
+	<script>
+	  document.addEventListener( 'DOMContentLoaded', function() {
+		var splide = new Splide( '.splide', {
+		  type   : 'loop',
+		  drag   : 'free',
+		  perPage: 3,
+		  snap   : false,
+		  focus    : 'center',
+		  padding: '5rem',
+		  wheel    : true,
+		  autoScroll: {
+			speed: 1,
+		  },
+		} );
+		splide.mount( window.splide.Extensions );
+	  } );
+	</script>
 </head>
 <body>
 	<div class="background"></div>
@@ -103,7 +124,73 @@
     <section id="view-work" class="portfolio section solid-bg bg-services">
         <div class="content-box portfolio-box">
             <h2 data-aos="fade-right" data-aos-easing="ease-in-sine">View My Work</h2>
-            <div class="scroll-container" data-aos="fade-up" data-aos-easing="ease-in-sine">
+            <div id="splide" class="splide" role="group" aria-label="Splide Basic HTML Example" data-aos="fade-up" data-aos-easing="ease-in-sine">
+			  <div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<div class="slide-container">
+								<div class="img-container">
+									<img src="./images/BadgerTobacco.png" />
+								</div>
+								<div class="img-desc">
+									<div class="img-title">Badger Tobacco</div>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<div class="slide-container">
+								<div class="img-container">
+									<img src="./images/CircleCityTickets.png" />
+								</div>
+								<div class="img-desc">
+									<div class="img-title">Circle City Tickets</div>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<div class="slide-container">
+								<div class="img-container">
+									<img src="./images/FromTheGroundUPLawnCare.png" />
+								</div>
+								<div class="img-desc">
+									<div class="img-title">Lawn Care Design</div>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<div class="slide-container">
+								<div class="img-container">
+									<img src="./images/HFHRestore.png" />
+								</div>
+								<div class="img-desc">
+									<div class="img-title">Habitat For Humanity Restore</div>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<div class="slide-container">
+								<div class="img-container">
+									<img src="./images/SeatHub.png" />
+								</div>
+								<div class="img-desc">
+									<div class="img-title">Seat Hub</div>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<div class="slide-container">
+								<div class="img-container">
+									<img src="./images/TheTicketCloud.png" />
+								</div>
+								<div class="img-desc">
+									<div class="img-title">The Ticket Cloud</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+			  </div>
+			</div>
+			<!-- div class="scroll-container" data-aos="fade-up" data-aos-easing="ease-in-sine">
 				<div class="scroll-track">
 					<span>
 						<div class="img-container">
@@ -178,7 +265,7 @@
 						</div>
 					</span>
 				</div>
-			</div>
+			</div -->
         </div>
     </section>
     
@@ -195,6 +282,7 @@
     </section>
     <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 	<script  src="./js/script.js"></script>
+	
 </body>
 </html>
 
