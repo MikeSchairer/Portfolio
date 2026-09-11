@@ -26,6 +26,14 @@
 		  autoScroll: {
 			speed: 1,
 		  },
+			breakpoints: {
+    1024: {
+      perPage: 2, // For screens smaller than 1024px
+    },
+    640: {
+      perPage: 1, // For screens smaller than 640px
+    }
+  },
 		} );
 		splide.mount( window.splide.Extensions );
 	  } );
