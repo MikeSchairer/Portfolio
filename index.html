@@ -40,6 +40,22 @@
 	</script>
 </head>
 <body>
+	<div id="BlockUIConfirm" class="BlockUIConfirm" style="display: none;">
+		<div class="blockui-mask"></div>
+		<div class="RowDialogBody">
+			<div class="confirm-header row-dialog-hdr-success">
+				E-Mail Submitted
+			</div>
+			<div class="confirm-body">
+				Thank you for submitting, we will contact you about your next project soon.
+			</div>
+			<div class="confirm-btn-panel pull-right">
+				<div class="btn-holder pull-right">
+					<input type="submit" class="row-dialog-btn btn btn-success" value="Close" onclick="document.getElementById('BlockUIConfirm').style.display = 'none';" />
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="background"></div>
     <!-- Fixed Navigation Bar -->
 	<div id="nav" class="navbar">
@@ -100,27 +116,34 @@
     </section>
 	
 	<!-- What I Do Section (Solid Content) -->
-    <section id="what" class="section solid-bg">
+    <section id="what" class="section solid-bg do-section">
         <div class="content-box what-box">
             <h2 data-aos="fade-right" data-aos-easing="ease-in-sine">What I Do...</h2>
-            <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1000">
-				<h3>Web Design</h3>
-				<p>Modern, responsive websites designed around usability, visual appeal and business goals.</p>
-
-				<h3>Web Development</h3>
-				<p>Front-end and custom web development using HTML, CSS, JavaScript and server-side technologies.</p>
-
-				<h3>UI/UX Design</h3>
-				<p>Clean interfaces and intuitive user experiences that make websites easier to navigate and use.</p>
-
-				<h3>Graphic Design</h3>
-				<p>Branding, advertisements, digital graphics, layouts and marketing materials.</p>
-
-				<h3>WordPress</h3>
-				<p>Website development, customization, content management and ongoing maintenance.</p>
-
-				<h3>Website Management</h3>
-				<p>Content updates, troubleshooting, optimization and ongoing website support.</p>
+            <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="400">
+				<div class="sub-section" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="800">
+					<h3>Web Design</h3>
+					<p>Modern, responsive websites designed around usability, visual appeal and business goals.</p>
+				</div>
+				<div class="sub-section" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="900">
+					<h3>Web Development</h3>
+					<p>Front-end and custom web development using HTML, CSS, JavaScript and server-side technologies.</p>
+				</div>
+				<div class="sub-section" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="1000">
+					<h3>UI/UX Design</h3>
+					<p>Clean interfaces and intuitive user experiences that make websites easier to navigate and use.</p>
+				</div>
+				<div class="sub-section" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="1100">
+					<h3>Graphic Design</h3>
+					<p>Branding, advertisements, digital graphics, layouts and marketing materials.</p>
+				</div>
+				<div class="sub-section" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="1200">
+					<h3>WordPress</h3>
+					<p>Website development, customization, content management and ongoing maintenance.</p>
+				</div>
+				<div class="sub-section" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="1300">
+					<h3>Website Management</h3>
+					<p>Content updates, troubleshooting, optimization and ongoing website support.</p>
+				</div>
 			</div>
         </div>
     </section>
@@ -309,7 +332,7 @@
             <h2 data-aos="fade-left" data-aos-easing="ease-in-sine">Skills</h2>
             <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine">
                 <h3>Design</h3>
-                <p>UI/UX Design, Graphic Design, Web Design, Branding, Typography, Layout Design, Wireframing, Digital Design, Print Design, & Color and Visual Design</p>
+                <p>UI/UX Design, Graphic Design, Web Design, Branding, Social Media Graphics, Typography, Layout Design, Wireframing, Digital Design, Print Design, & Color and Visual Design</p>
             </div>
             <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="500">
                 <h3>Web Development</h3>
@@ -323,70 +346,94 @@
     </section>
 	
 	<!-- Education Section (Parallax Background) -->
-	<section id="education" class="section solid-bg bg-services">
+	<section id="education" class="section solid-bg bg-education education-section">
         <div class="content-box">
             <h2 data-aos="fade-left" data-aos-easing="ease-in-sine">Education</h2>
             <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine">
                 <h3>Moraine Park Technical College</h3>
-                <p>AAS — Mobile Applications Developer<br/>2018</p>
+                <p><i>Web Development & Design Specialist</i><br/><strong>Graduated 2018 - AAS</strong></p>
+				<p>
             </div>
             <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="500">
                 <h3>Waukesha County Technical College</h3>
-                <p>Architectural Design & Drafting<br/>2009</p>
+                <p><i>Architectural Design & Drafting</i><br/><strong>Graduated 2009 - AAS</strong></p>
             </div>
             <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1000">
                 <h3>Arrowhead Union High School</h3>
-                <p>High School Diploma<br/>2007</p>
+                <p><i>High School Diploma</i><br/><strong>Gradutaed 2007</strong></p>
             </div>
         </div>
     </section>
 
 	<!-- Experience Section (Parallax Background) -->
-	<section id="experience" class="section solid-bg bg-services">
+	<section id="experience" class="section solid-bg bg-services experience-section">
         <div class="content-box">
             <h2 data-aos="fade-left" data-aos-easing="ease-in-sine">Professional Experience</h2>
             <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine">
-                <h3>Spielbauer</h3>
-                <p>Pyrotechnic Operator<br/>2011-2019</p>
+                <h3>Freelancer</h3>
+                <p><i>Web Coder & Graphic Designer</i><br/><strong>2008-Present</strong></p>
             </div>
-            <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="500">
-                <h3>ARI Network Services</h3>
-                <p>Data Conversion Specialist<br/>2010-2018</p>
-            </div>
-            <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1000">
+			<div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="300">
                 <h3>Ticket Platform, LLC</h3>
-                <p>Web Coding Manager<br/>2010-2020</p>
+                <p><i>Web Coding Manager</i><br/><strong>2010-2020</strong></p>
             </div>
-			<div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1000">
+			<div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="500">
+                <h3>Spielbauer</h3>
+                <p><i>Pyrotechnic Operator</i><br/><strong>2011-2019</strong></p>
+            </div>
+            <div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="700">
+                <h3>ARI Network Services</h3>
+                <p><i>Data Conversion Specialist</i><br/><strong>2010-2018</strong></p>
+            </div>
+			<div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="900">
                 <h3>PerMar Ltd.</h3>
-                <p>Marketing Design / Website Administrator<br/>2010-2014</p>
+                <p><i>Marketing Design / Website Administrator</i><br/><strong>2010-2014</strong></p>
             </div>
-			<div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1000">
+			<div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1100">
                 <h3>Precision Innovations</h3>
-                <p>Machine Operator / CNC Vertical Mill Operator<br/>2009-2010</p>
-            </div>
-			<div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1000">
-                <h3>Mequon Country Club</h3>
-                <p>Design / Maintenance<br/>2007-2009</p>
+                <p><i>Machine Operator / CNC Vertical Mill Operator</i><br/><strong>2009-2010</strong></p>
             </div>
         </div>
     </section>
 
 	
     <!-- Contact Section (Solid Content) -->
-    <section id="contact" class="section solid-bg">
-        <div class="content-box text-dark">
-            <h2>Get In Touch</h2>
-            <p>Ready to start your next creative project? Reach out below.</p>
-            <form class="contact-form" onsubmit="event.preventDefault();">
-                <input type="email" placeholder="Your Email Address" required>
-                <button type="submit" class="btn btn-dark">Send Message</button>
-            </form>
+    <section id="contact" class="section solid-bg contact-section">
+        <div class="content-box">
+			<div class="section-box" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="400">
+				<h2>Get In Touch</h2>
+				<p>Ready to start your next creative project? Reach out below.</p>
+				<form action="https://api.web3forms.com/submit" method="POST">
+				<input type="hidden" name="access_key" value="c50eeb9d-77a3-4332-804d-25faf5fb9985">
+				<input type="text" name="name" placeholder="Please Enter Full Name" required>
+				<input type="email" name="email" placeholder="Please Enter Valid E-Mail" required>
+				<textarea name="message" placeholder="Add comments about your upcoming project." required></textarea>
+				<button type="submit">Submit</button>
+				</form>
+			</div>
         </div>
     </section>
     <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 	<script  src="./js/script.js"></script>
-	
+	<script>
+		// Wait until the DOM content is fully loaded
+		document.addEventListener("DOMContentLoaded", function() {
+			// Set the word you are looking for
+			const keyword = "thank"; 
+			
+			// Get the current page URL
+			const currentUrl = window.location.href; 
+			
+			// Check if the URL includes the keyword
+			if (currentUrl.includes(keyword)) {
+				// Find the div and display it
+				document.getElementById("BlockUIConfirm").style.display = "block";
+			}
+		});
+		function close() {
+			document.getElementById("BlockUIConfirm").style.display = "none";
+		}
+	</script>
 </body>
 </html>
 
