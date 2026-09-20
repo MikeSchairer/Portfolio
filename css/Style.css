@@ -488,7 +488,7 @@ p {
 	transition-duration: 2s;
 }
 .splide .img-container {
-	height: 15rem;
+	height: 25rem;
 	overflow: hidden;
 }
 .splide .img-container img {
