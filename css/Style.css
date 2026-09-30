@@ -462,7 +462,7 @@ p {
 	font-weight: 400;
 	font-style: normal;
 	color: #fee;
-	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #0F8AD8, 0 0 0.5em #0F8AD8, 0 0 0.1em #0F8AD8, 0 10px 3px #000;	
+	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #79F335, 0 0 0.5em #79F335, 0 0 0.1em #79F335, 0 10px 3px #000;	
 }
 .about-box {
 	background-color: rgba(0,0,0,0.6);
@@ -593,7 +593,7 @@ p {
 	width: 100%;
 }
 .portfolio-box h2 {
-	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #0F8AD8, 0 0 0.5em #0F8AD8, 0 0 0.1em #0F8AD8, 0 10px 3px #000;	
+	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #79F335, 0 0 0.5em #79F335, 0 0 0.1em #79F335, 0 10px 3px #000;	
 }
 .scroll-container {
 	width: 100%;
