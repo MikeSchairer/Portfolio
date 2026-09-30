@@ -15,4 +15,7 @@ nav = document.getElementById("logo");
 
 AOS.init({
   duration: 1200,
-})
+});
+
+document.querySelectorAll('.nav-links a').forEach(a =>
+  a.addEventListener('click', () => document.getElementById('menu-btn').checked = false));

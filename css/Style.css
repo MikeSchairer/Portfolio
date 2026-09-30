@@ -901,3 +901,133 @@ p {
 		justify-content: center;
 	}
 }
+
+
+/* =====================================================================
+   MOBILE / RESPONSIVE OVERRIDES
+   Keep this block at the very END of the file so it wins over the rules above.
+   ===================================================================== */
+
+/* Menu (hamburger) lines were #333 on a dark bar, so they were invisible */
+.menu-icon .navicon,
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: #fff;
+}
+.menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* ---------- Tablet and below: stop fixed-width / fixed-height layouts ---------- */
+@media (max-width: 1000px) {
+    html { overflow-x: hidden; }
+
+    .navbar { width: 100%; }
+
+    /* 100vh sections clip their content on phones; let them grow instead */
+    .section {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 90px 20px 40px;      /* top padding clears the fixed nav */
+        scroll-margin-top: 0;
+    }
+    #hero { margin: 0 auto; }
+    .portfolio.section { padding-left: 0; padding-right: 0; }   /* slider is full-bleed */
+
+    /* 1200px fixed width was forcing horizontal scrolling */
+    .content-box {
+        width: 100%;
+        max-width: 1200px;
+        display: flow-root;           /* contains floated children */
+    }
+
+    /* Un-float the cards and stack them full width */
+    .section-box,
+    .education-section div.section-box,
+    .experience-section div.section-box,
+    .education-section div.section-box:nth-of-type(1),
+    .experience-section div.section-box:nth-of-type(1),
+    .experience-section div.section-box:nth-of-type(4) {
+        float: none;
+        width: calc(100% - 46px);     /* 46px = padding + border of the box */
+        margin: 0 0 15px;
+    }
+
+    /* "What I Do" 3-column grid -> single column */
+    .do-section div.sub-section,
+    .do-section div.sub-section:nth-of-type(1),
+    .do-section div.sub-section:nth-of-type(4) {
+        float: none;
+        clear: none;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .do-section div.sub-section p { padding: 0; }
+
+    .about-box,
+    .hero-description {
+        width: calc(100% - 46px);
+        max-width: 500px;
+    }
+    .contact-section form {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 640px) {
+    body { font-size: 16px; line-height: 1.5; }
+
+    /* Scale the big neon headings so they fit the screen */
+    .content-box h1 { font-size: clamp(2.2rem, 12vw, 3.5rem); line-height: 1.1; }
+    .content-box h2,
+    h2 { font-size: 2.2em; line-height: 1.1; }
+    .bg-hero strong { font-size: 1.5em; }
+    .my-title i { font-size: 0.95em; line-height: 1.4; display: inline-block; }
+
+    /* Nav bar */
+    .logo.show { padding: 10px 15px; }
+    .logo.show b { font-size: 1.5em; }
+    .nav-links { max-height: 0; }
+    .menu-btn:checked ~ .nav-links {
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+    .menu-btn:checked ~ .nav-links a { padding: 14px 0; }   /* bigger tap target */
+
+    /* Portfolio slider: 5rem side padding leaves almost no room on a phone */
+    .splide__track {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    .splide .img-container { height: 15rem; }
+    .splide .description { font-size: 0.8em; line-height: 1.2em; }
+
+    /* Form: 16px inputs stop iOS from zooming the page on focus */
+    .contact-section input,
+    .contact-section textarea,
+    .contact-section button {
+        font-size: 16px;
+        font-family: inherit;
+        line-height: 1.8;
+    }
+    .contact-section textarea { min-height: 120px; }
+    .contact-section button { width: 100%; padding: 8px 0; }
+
+    .RowDialogBody { width: calc(100% - 30px); }
+}
+
+/* ---------- Very small phones ---------- */
+@media (max-width: 360px) {
+    .section { padding-left: 12px; padding-right: 12px; }
+    .portfolio.section { padding-left: 0; padding-right: 0; }
+    .section-box { padding: 10px 12px; }
+    .section-box,
+    .education-section div.section-box,
+    .experience-section div.section-box { width: calc(100% - 30px); }
+    .logo.show b { font-size: 1.25em; }
+}
