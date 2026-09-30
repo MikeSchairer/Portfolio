@@ -795,6 +795,42 @@ p {
 	background-color: rgba(0,0,0,0);
 }
 
+/* The Side Button Magic */
+.side-button {
+  position: fixed;
+  right: 0;                /* Sticks it directly to the right edge */
+  top: 50%;               /* Centers it vertically */
+  transform: translateY(-50%); /* Perfectly aligns the vertical center */
+  z-index: 9999;          /* Ensures it stays on top of all elements */
+  
+  /* Vertical Text Properties */
+  writing-mode: vertical-rl; /* Rotates the text to read top-to-bottom */
+  text-orientation: mixed;   /* Ensures letters flow naturally vertically */
+  
+  /* Styling & Polish */
+  background-color: rgba(36, 96, 229, 0.6); /* Royal blue */
+  color: #ffffff;
+  padding: 15px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 5px 0 0 5px; /* Rounds only the inner-facing corners */
+  cursor: pointer;
+  transition: background-color 0.2s ease, padding-right 0.2s ease;
+  box-shadow: inset 0px 0px 6px 2px rgba(255, 255, 255, 0.08),
+	inset 0px 6px 18px 0px rgba(0, 0, 0, 0.08), 0 0 1em rgba(15, 138, 216, 0.5), 0 0 0.5em rgba(15, 138, 216, 0.5), 0 0 0.1em rgba(15, 138, 216, 0.5);
+  text-transform: uppercase;
+}
+
+/* Hover Effect */
+.side-button:hover {
+  background-color: #1d4ed8; /* Darker blue */
+  padding-right: 15px;       /* Subtle pull-out effect on hover */
+}
+
+
 
 /* Responsive Scaling Rules */
 @media (max-width: 900px) {

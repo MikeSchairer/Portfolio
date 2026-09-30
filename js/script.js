@@ -19,3 +19,7 @@ AOS.init({
 
 document.querySelectorAll('.nav-links a').forEach(a =>
   a.addEventListener('click', () => document.getElementById('menu-btn').checked = false));
+  
+document.getElementById('ResumeButton').addEventListener('click', () => {
+  window.open('https://mikeschairer.github.io/Portfolio/Michael_Schairer_Resume.pdf', '_blank', 'noopener,noreferrer');
+});
